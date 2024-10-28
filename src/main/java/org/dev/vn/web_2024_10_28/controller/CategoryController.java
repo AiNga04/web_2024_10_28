@@ -52,6 +52,15 @@ public class CategoryController {
         return "redirect:/categories";
     }
 
+    @GetMapping("/detail/{id}")
+    public String categoryDetail(@PathVariable Long id, Model model) {
+        Category category = categoryService.getCategoryById(id)
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+        model.addAttribute("category", category);
+        return "category/detail";  // This should map to src/main/resources/templates/category/detail.html
+    }
+
+
     @GetMapping("/delete/{id}")
     public String deleteCategory(@PathVariable Long id) {
         categoryService.deleteCategory(id);

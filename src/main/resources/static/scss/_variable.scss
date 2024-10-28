@@ -1,7 +1,23 @@
-// colors.scss
+// Màu sắc chính
 $primary-color: #333;
+$secondary-color: #4a90e2;
+$accent-color: #f39c12;
+
+
+// Màu nền và chữ
 $background-color: #f4f4f9;
 $text-color: #333;
+$header-bg-color: #3586ff;
+
+// Màu nút và tương tác
 $button-bg-color: #5cb85c;
 $button-hover-bg-color: #4cae4c;
 $input-border-color: #ddd;
+$link-hover-color: #f39c12;
+
+// Màu cho các chi tiết khác
+$light-gray: #ecf0f1;
+$dark-gray: #2c3e50;
+
+// Kích thước font chữ cho logo
+$logo-font-size: 2.5rem;

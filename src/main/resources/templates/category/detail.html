@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Chi tiết danh mục</title>
-    <link rel="stylesheet" href="../../static/css/detail.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/detail.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}"/>
 </head>
 <body>
-<header th:insert="header :: header"></header>
+<div th:replace="fragments/header :: header"></div>
 <main>
     <h2>Chi tiết danh mục</h2>
     <div>
@@ -17,6 +19,8 @@
     </div>
     <a th:href="@{/categories}">Quay lại danh sách</a>
 </main>
-<footer th:insert="footer :: footer"></footer>
+<div th:replace="fragments/footer :: footer"></div>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
