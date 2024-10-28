@@ -1,10 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Danh sách danh mục</title>
+    <link rel="stylesheet" href="../../static/css/list.css">
 </head>
 <body>
-$END$
+<header th:insert="header :: header"></header>
+<main>
+    <h2>Danh sách danh mục</h2>
+    <form action="#" method="get">
+        <input type="text" name="search" th:value="${search}" placeholder="Tìm kiếm danh mục...">
+        <button type="submit">Tìm kiếm</button>
+        <a href="/categories/create">Thêm danh mục mới</a>
+    </form>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Tên danh mục</th>
+            <th>Mô tả</th>
+            <th>Hình ảnh</th>
+            <th>Hành động</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="category : ${categories.content}">
+            <td th:text="${category.name}"></td>
+            <td th:text="${category.description}"></td>
+            <td><img th:src="${category.imageUrl}" alt="Category Image" width="50"/></td>
+            <td>
+                <a th:href="@{'/categories/edit/' + ${category.id}}">Chỉnh sửa</a> |
+                <a th:href="@{'/categories/delete/' + ${category.id}}">Xóa</a> |
+                <a th:href="@{'/categories/detail/' + ${category.id}}">Chi tiết</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <a th:if="${categories.hasPrevious()}" th:href="@{'/categories?page=' + ${categories.number - 1}}">Trang trước</a>
+        <a th:if="${categories.hasNext()}" th:href="@{'/categories?page=' + ${categories.number + 1}}">Trang sau</a>
+    </div>
+</main>
+<footer th:insert="footer :: footer"></footer>
 </body>
 </html>

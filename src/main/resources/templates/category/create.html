@@ -1,10 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tạo danh mục mới</title>
+    <link rel="stylesheet" href="../../static/css/create.css">
 </head>
 <body>
-$END$
+<header th:insert="header :: header"></header>
+<main>
+    <h2>Tạo danh mục mới</h2>
+    <form action="#" th:action="@{/categories}" th:object="${category}" method="post">
+        <label for="name">Tên danh mục:</label>
+        <input type="text" id="name" th:field="*{name}" required>
+
+        <label for="description">Mô tả:</label>
+        <textarea id="description" th:field="*{description}"></textarea>
+
+        <label for="imageUrl">URL hình ảnh:</label>
+        <input type="text" id="imageUrl" th:field="*{imageUrl}">
+
+        <button type="submit">Lưu</button>
+    </form>
+</main>
+<footer th:insert="footer :: footer"></footer>
 </body>
 </html>
+

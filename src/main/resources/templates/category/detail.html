@@ -1,10 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Chi tiết danh mục</title>
+    <link rel="stylesheet" href="../../static/css/detail.css">
 </head>
 <body>
-$END$
+<header th:insert="header :: header"></header>
+<main>
+    <h2>Chi tiết danh mục</h2>
+    <div>
+        <p><strong>Tên danh mục:</strong> <span th:text="${category.name}"></span></p>
+        <p><strong>Mô tả:</strong> <span th:text="${category.description}"></span></p>
+        <p><strong>Hình ảnh:</strong></p>
+        <img th:src="${category.imageUrl}" alt="Category Image" width="200"/>
+    </div>
+    <a th:href="@{/categories}">Quay lại danh sách</a>
+</main>
+<footer th:insert="footer :: footer"></footer>
 </body>
 </html>

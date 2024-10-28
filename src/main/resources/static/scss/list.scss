@@ -1,0 +1,108 @@
+@import 'variable';
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+main {
+  margin: 40px auto;
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: $primary-color;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: $button-bg-color;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $button-hover-bg-color;
+    }
+  }
+
+  a {
+    padding: 10px 15px;
+    background-color: $primary-color;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    border: 1px solid $input-border-color;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: $primary-color;
+    color: white;
+  }
+
+  td img {
+    border-radius: 5px;
+  }
+
+  td a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

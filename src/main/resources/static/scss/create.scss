@@ -1,0 +1,17 @@
+@import 'variable';
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+header, footer {
+  background-color: $primary-color;
+}
+
+button {
+  background-color: $button-bg-color;
+  &:hover {
+    background-color: $button-hover-bg-color;
+  }
+}
