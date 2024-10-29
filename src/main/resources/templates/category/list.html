@@ -2,28 +2,37 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Danh sách danh mục</title>
+    <title th:text="#{iotstar.value.listCate}">Quản lý Danh Mục</title>
     <link rel="stylesheet" type="text/css" th:href="@{/css/list.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/header.css}"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+        }
+    </style>
 </head>
 <body>
 <div th:replace="fragments/header :: header"></div>
 <main>
-    <h2>Danh sách danh mục</h2>
+    <h2 th:text="#{iotstar.value.listCate}">Danh sách danh mục</h2>
+    <span th:text="#{iotstar.message.hello}"></span>
+    <a href="?language=en">English</a> | <a href="?language=vi_VN">Việt Nam</a>
     <form action="#" method="get">
-        <input type="text" name="search" th:value="${search}" placeholder="Tìm kiếm danh mục...">
-        <button type="submit">Tìm kiếm</button>
-        <a href="/categories/create">Thêm danh mục mới</a>
+        <input type="text" name="search" th:value="${search}" th:placeholder="#{iotstar.value.find}">
+        <button type="submit" th:text="#{iotstar.value.search}">Tìm kiếm</button>
+        <a href="/categories/create" th:text="#{iotstar.value.add}">Thêm danh mục mới</a>
     </form>
 
     <table>
         <thead>
         <tr>
-            <th>Tên danh mục</th>
-            <th>Mô tả</th>
-            <th>Hình ảnh</th>
-            <th>Hành động</th>
+            <th th:text="#{iotstar.value.addCate}">Tên danh mục</th>
+            <th th:text="#{iotstar.value.description}">Mô tả</th>
+            <th th:text="#{iotstar.value.image}">Hình ảnh</th>
+            <th th:text="#{iotstar.value.action}">Hành động</th>
         </tr>
         </thead>
         <tbody>
