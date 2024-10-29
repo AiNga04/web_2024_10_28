@@ -1,8 +1,6 @@
-@import 'variable';
-
 body {
   font-family: Arial, sans-serif;
-  background-color: $background-color;
+  background-color: #f4f4f9;
   margin: 0;
   padding: 0;
   display: flex;
@@ -10,7 +8,7 @@ body {
 }
 
 header, footer {
-  background-color: $primary-color;
+  background-color: #333;
   color: white;
   text-align: center;
   padding: 10px;
@@ -25,16 +23,16 @@ main {
 }
 
 h2 {
-  color: $text-color;
+  color: #333;
   font-size: 24px;
 }
 
 p {
   font-size: 16px;
-  color: darken($text-color, 10%);
-  strong {
-    color: $text-color;
-  }
+  color: rgb(25.5, 25.5, 25.5);
+}
+p strong {
+  color: #333;
 }
 
 img {
@@ -43,3 +41,5 @@ img {
   width: 200px;
   border-radius: 5px;
 }
+
+/*# sourceMappingURL=detail.css.map */

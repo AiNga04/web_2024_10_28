@@ -2,7 +2,6 @@
 
 .header {
   background-color: $header-bg-color;
-  color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
@@ -10,17 +9,12 @@
 
   .logo {
     display: inline-block;
-    font-size: $logo-font-size;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #fff;
     text-align: center;
 
-    h1 {
+    .img {
       margin: 0;
-      font-size: inherit;
-      font-family: "Poppins", sans-serif;
+      height: auto;
+      width: 100px;
     }
   }
 }
